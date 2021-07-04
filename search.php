@@ -3,9 +3,12 @@ include 'db.php';
 session_start();
 if( (isset($_POST['search'])) && ($_POST['find']) !='' )
 {
+    $seach= ['-','\'','#',''];
+    $repalce='';
     //echo $_POST['find'];
-    $search = $_POST['find'];
-   // echo $search;
+    $search = htmlspecialchars($_POST['find']);
+    $search =str_replace($seach,$repalce,$search);
+    
     $sql = "SELECT *from post where content_post LIKE '%$search%' ";
 
     $find =mysqli_query($con,$sql);
@@ -44,10 +47,14 @@ if( (isset($_POST['search'])) && ($_POST['find']) !='' )
     
             }
     
-    }   
+    }  
+    else
+    {
+        echo "không tìm thấy";
+    }
 }
 else
 {
-   // header("location:index.php");
+   header("location:index.php");
 }
 ?>

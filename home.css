@@ -41,7 +41,7 @@ body {
     font-size: 14pt;
     color:#7FB39F;
     font-family: 'Ubuntu', sans-serif;
-    
+
 }
 
 .sign {
@@ -58,7 +58,7 @@ body {
       padding-bottom: 10px;
       padding-top: 10px;
       font-family: 'Ubuntu', sans-serif;
-        margin-left: 1%;
+        margin-left: 100%;
       font-size: 20pt;
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
       font-style:initial ;
@@ -158,3 +158,6 @@ font-family: 'Ubuntu', sans-serif;
     margin-left: 0px;
 }
 
+.seach{
+    margin-top: 40%;
+}

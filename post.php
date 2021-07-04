@@ -5,8 +5,12 @@ session_start();
 if( (isset($_POST['btn_post'])) && ($_POST['content']) !='' )
 {
     //echo $_SESSION["user"];
+    $seach= ['-','\'','#','UNION SELECT'];
+    $repalce='';
+
     $content = htmlspecialchars($_POST['content']);
-    $user=$_SESSION['user'];
+    $content =str_replace($seach,$repalce,$content);
+    $user=$_SESSION['usr'];
     echo $user;
     echo $content;
     $sql =" INSERT INTO post (username_post,content_post) values('$user','$content')";

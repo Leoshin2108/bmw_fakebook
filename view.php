@@ -43,7 +43,7 @@ include 'db.php';
               echo $data[$i]['content'];
                ?>
                 <?php   
-                   if ($_SESSION['user']== $data[$i]['user'])
+                   if ($_SESSION['usr']== $data[$i]['user'])
                    {
                        
                        ?>
@@ -103,7 +103,7 @@ include 'db.php';
                             }
                         }
                     ?>
-                    <input name="content_cmt" id="<?php echo $data[$i]['id']?>"class="cmt" placeholder="<?php echo $i?>">
+                    <input name="content_cmt" class="cmt" placeholder="bình luận ở đây">
                     <!--button đăng bình luận-->
                     <input name="id" hidden="" value="<?php echo $data[$i]['id']?>">
                     <button name="btn_send_cmt" type="submit">send</button>

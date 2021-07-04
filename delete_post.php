@@ -5,7 +5,7 @@ include 'db.php';
 //echo $_SESSION['id'];
 $id_post= $_SESSION['id'];
 //echo  $_SESSION['id'];
-$username_post= $_SESSION['user'];
+$username_post= $_SESSION['usr'];
 echo $id_post;
 echo $username_post;
 $sql = "SELECT *from post where id_post=$id_post";
