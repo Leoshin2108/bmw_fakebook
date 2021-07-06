@@ -1,6 +1,7 @@
+
 <?php
 include 'db.php';
-session_start();
+//session_start();
 if( (isset($_POST['search'])) && ($_POST['find']) !='' )
 {
     $seach= ['-','\'','#',''];
@@ -21,16 +22,16 @@ if( (isset($_POST['search'])) && ($_POST['find']) !='' )
        //echo mysqli_num_rows($find);
     
             $count = mysqli_num_rows($find);
-            echo $count;
+            //echo $count;
             $i=0;
             $data =array();
             while ($tmp = mysqli_fetch_array($find))
             { 
                 $i=$i+1;
-                ?>
-                <!--nội dung bài đăng -->
-                <a >
-                <?php
+               
+                
+               
+                
                  //user
 
                     $user_temo = array (
@@ -39,8 +40,12 @@ if( (isset($_POST['search'])) && ($_POST['find']) !='' )
                         'content'=>$tmp['content_post']
                     );
                     $data[$i] =$user_temo;
-                    echo $data[$i]['user'];
-                    echo $data[$i]['content'];
+                    
+                    
+                            echo $data[$i]['user'];
+                            echo $data[$i]['content'];
+                            echo "123";
+            
                     
 
                  //content
@@ -52,9 +57,11 @@ if( (isset($_POST['search'])) && ($_POST['find']) !='' )
     {
         echo "không tìm thấy";
     }
+
+   // header("location:find.php");
 }
 else
 {
-   header("location:index.php");
+   header("location:find.php");
 }
 ?>

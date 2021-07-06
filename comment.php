@@ -6,6 +6,13 @@ if( (isset($_POST['btn_send_cmt'])) && ($_POST['content_cmt']) !='' )
 {
     //echo $_SESSION["user"];
     $content = htmlspecialchars( $_POST['content_cmt']);
+
+    $search= ['\''];
+
+     $repalce='‘'; 
+    $content =str_replace($search,$repalce,$content);
+
+ 
     $user=$_SESSION['usr'];
     $id_post=$_POST['id'];
     //echo $user;

@@ -6,8 +6,14 @@ include 'db.php';
       <!--tên người đăng bài -->
       <a>
         <?php
-         $sql = "SELECT *from post";
-
+         $seach= ['-','\'','#',''];
+         $repalce='';
+         //echo $_POST['find'];
+         $search = htmlspecialchars($_SESSION['search']);
+         $search =str_replace($seach,$repalce,$search);
+         
+         $sql = "SELECT *from post where content_post LIKE '%$search%' ";
+     
          $post =mysqli_query($con,$sql);
         
         //echo mysqli_num_rows($post);
@@ -32,17 +38,16 @@ include 'db.php';
                         'content'=>$tmp['content_post']
                     );
                     $data[$i] =$user_temo;
-
-                    echo $data[$i]['user'];
                     
-                 //content
+                    echo $data[$i]['user'];
+                   
                 ?>
                 </a>
                 <a>:</a>
               <a>
               <?php
               echo $data[$i]['content'];
-               ?>
+               ?>  
                 <?php   
                    if ($_SESSION['usr']== $data[$i]['user'])
                    {
@@ -65,8 +70,6 @@ include 'db.php';
                    }
                     
                    ?>
-            
-              
               </a>
                 
                 <div class="cmt_l">
@@ -113,7 +116,8 @@ include 'db.php';
                   
                 </div>
             <?php }
-         }
+         } else
+         echo "không tìm thấy kết quả";
         ?>
       </a>
     </div>   

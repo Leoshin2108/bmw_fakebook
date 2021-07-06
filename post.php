@@ -5,11 +5,12 @@ session_start();
 if( (isset($_POST['btn_post'])) && ($_POST['content']) !='' )
 {
     //echo $_SESSION["user"];
-    $seach= ['-','\'','#','UNION SELECT'];
-    $repalce='';
+    $seach= ['\''];
+    $repalce='‘';
 
     $content = htmlspecialchars($_POST['content']);
     $content =str_replace($seach,$repalce,$content);
+
     $user=$_SESSION['usr'];
     echo $user;
     echo $content;

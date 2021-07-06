@@ -14,8 +14,8 @@
                 <div class ="header" >
                 <div>
                 
-                <a class="fakebook">FaKeBoOk<a>
-                    <form action="search.php" method="POST">
+                <a class="fakebook" href="index.php">FaKeBoOk<a>
+                    <form action="find.php" method="POST">
                         <input name="find"  type="text" placeholder=" tìm kiếm"> 
                         <button name="search" type="submit">seach</button>  
                     </form>

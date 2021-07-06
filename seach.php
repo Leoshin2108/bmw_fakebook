@@ -14,19 +14,21 @@
                 <div class ="header" >
                 <div>
                 
-                <a class="fakebook">FaKeBoOk<a>
+                <a class="fakebook" href="index.php">FaKeBoOk<a>
+                    <form action="find.php" method="POST">
+                        <input name="find"  type="text" placeholder=" tìm kiếm"> 
+                        <button name="search" type="submit">seach</button>  
+                    </form>
                    
                         <div class="menu ">
                         <l id="main_menu" >
-                            <li><a href="./seach.php" >tìm kiếm</a></li>
-                            <li><a href="" >Cài đặt</a></li>
+                            <li><a href="" class="">Trang cá nhân</a></li>
                             <li>
- <div>
-                                <form action="logout.php" method="POST" class="seach">
-                                    <button class="seach" name="logout" type="submit">log 123out</button>  
-                                </form>
-                                
+                            <form action="logout.php" method="POST">
+                        <button name="logout" type="submit">log out</button>  
+                    </form>
                             </li>
+                            <li><a href="" >Cài đặt</a></li>
                         </div>
                               
                     </div>
@@ -34,16 +36,17 @@
 
                 
                 <div class="main1">
-                    <form action="" method="POST">
+                    <form action="post.php" method="POST">
                         <div>
-                            <input name="content" class="un" type="text" placeholder=" bạn đạng nghĩ gì">   
-                              
+                            <input name="content" class="un" type="text" placeholder="bạn đạng nghĩ gì">   
                             <button name="btn_post" type="submit">đăng</button>
                         </div>
                     </form>
                 
                 <div class="post">
-                <?php //require_once "view.php" ?>
+                <?php  
+                 //content
+                 require_once "viewsearch.php" ?>
                 
                 </div>  
                         
