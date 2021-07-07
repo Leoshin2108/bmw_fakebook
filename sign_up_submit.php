@@ -32,7 +32,8 @@ if((isset ($_POST['submit'])) && $_POST['username']!= '' && $_POST['Email']!= ''
    }
    else
    {
-    $password = md5($password);
+    //$password = md5($password);
+    $password=password_hash($password, PASSWORD_DEFAULT);
     $sql =" INSERT INTO users (username,password,email) values('$username','$password','$Email')";
     mysqli_query($con,$sql);
     //echo"123";

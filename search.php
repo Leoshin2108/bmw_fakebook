@@ -4,8 +4,8 @@ include 'db.php';
 //session_start();
 if( (isset($_POST['search'])) && ($_POST['find']) !='' )
 {
-    $seach= ['-','\'','#',''];
-    $repalce='';
+    $seach= ['\''];
+    $repalce='‘';
     //echo $_POST['find'];
     $search = htmlspecialchars($_POST['find']);
     $search =str_replace($seach,$repalce,$search);
