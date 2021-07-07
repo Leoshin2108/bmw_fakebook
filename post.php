@@ -19,9 +19,9 @@ if( (isset($_POST['btn_post'])) && ($_POST['content']) !='' )
 }
 else
 {
-    header("location:index.php");
+    header("location:fakebook.php");
 }
-header("location:index.php");
+header("location:fakebook.php");
 ?>
 <?php
 

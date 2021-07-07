@@ -18,7 +18,7 @@ if ((mysqli_num_rows($delete)>0))
         $delete_post =mysqli_query($con,$sql_delete);
         $sql_delete_cmt="DELETE FROM cmt  where id_post=$id_post";
         $delete_cmt =mysqli_query($con,$sql_delete_cmt);
-       header("location:index.php");
+       header("location:fakebook.php");
     }
     else
     {
