@@ -10,10 +10,10 @@ if((isset ($_POST['submit'])) && $_POST['username']!= '' && $_POST['Email']!= ''
     $seach= ['-','\'','#',''];
     $repalce='';
 
-    $username   =addslashes($_POST['username']);
-    $Email      =addslashes($_POST['Email']);
-    $password   =addslashes($_POST['password']);
-    $repassword =addslashes($_POST['repassword']);
+    $username   =htmlspecialchars(addslashes($_POST['username']));
+    $Email      =htmlspecialchars(addslashes($_POST['Email']));
+    $password   =htmlspecialchars(addslashes($_POST['password']));
+    $repassword =htmlspecialchars(addslashes($_POST['repassword']));
     
     $filer_usr =str_replace($seach,$repalce,$username);
     echo $filer_usr;

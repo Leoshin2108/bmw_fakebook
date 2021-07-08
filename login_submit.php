@@ -5,8 +5,8 @@ include 'db.php';
 
 if((isset ($_POST['submit'])) && $_POST['username']!= ''  && $_POST['password']!='' )
 {
-    $username = addslashes($_POST['username']);
-    $pasword = addslashes($_POST['password']);
+    $username = htmlspecialchars(addslashes($_POST['username']));
+    $pasword = htmlspecialchars(addslashes($_POST['password']));
     //$pasword = password_hash($password, PASSWORD_DEFAULT);//md5($pasword);
     //echo
     $sql = "SELECT *from users where username= '$username' ";
