@@ -9,7 +9,8 @@ if( (isset($_POST['btn_post'])) && ($_POST['content']) !='' )
     $repalce='‘';
 
     $content = htmlspecialchars($_POST['content']);
-    $content =str_replace($seach,$repalce,$content);
+    //$content =str_replace($seach,$repalce,$content);
+    $content = addslashes($content);
 
     $user=$_SESSION['usr'];
     echo $user;

@@ -8,7 +8,8 @@ if( (isset($_POST['search'])) && ($_POST['find']) !='' )
     $repalce='‘';
     //echo $_POST['find'];
     $search = htmlspecialchars($_POST['find']);
-    $search =str_replace($seach,$repalce,$search);
+    //$search =str_replace($seach,$repalce,$search);
+    $search = addslashes($search);
     
     $sql = "SELECT *from post where content_post LIKE '%$search%' ";
 

@@ -21,14 +21,14 @@ if((isset ($_POST['submit'])) && $_POST['username']!= ''  && $_POST['password']!
         $password_check = password_verify($pasword,$tmp['password']);
         if ($password_check)
         {
-        echo "ddawng nhap thanh cong";
+        //echo "ddawng nhap thanh cong";
         $username_hash = password_hash($username,PASSWORD_DEFAULT);
         $_SESSION["user"] =$username_hash;//$username_hash;
         header("location:fakebook.php");
         }
         else
         {
-            echo"không thanh công";
+            //echo"không thanh công";
             header("location:login.php");
         }
         

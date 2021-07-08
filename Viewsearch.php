@@ -10,7 +10,8 @@ include 'db.php';
          $repalce='';
          //echo $_POST['find'];
          $search = htmlspecialchars($_SESSION['search']);
-         $search =str_replace($seach,$repalce,$search);
+         $search = addslashes($search);
+        // $search =str_replace($seach,$repalce,$search);
          
          $sql = "SELECT *from post where content_post LIKE '%$search%' ";
      
