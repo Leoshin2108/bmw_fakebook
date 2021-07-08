@@ -1,7 +1,7 @@
 <?php
 
 include 'db.php';
-echo "sigun";
+//echo "sigun";
 
 
 if((isset ($_POST['submit'])) && $_POST['username']!= '' && $_POST['Email']!= '' && $_POST['password']!= '' && $_POST['repassword']!='' )
@@ -10,10 +10,10 @@ if((isset ($_POST['submit'])) && $_POST['username']!= '' && $_POST['Email']!= ''
     $seach= ['-','\'','#',''];
     $repalce='';
 
-    $username   =$_POST['username'];
-    $Email      =$_POST['Email'];
-    $password   =$_POST['password'];
-    $repassword =$_POST['repassword'];
+    $username   =addslashes($_POST['username']);
+    $Email      =addslashes($_POST['Email']);
+    $password   =addslashes($_POST['password']);
+    $repassword =addslashes($_POST['repassword']);
     
     $filer_usr =str_replace($seach,$repalce,$username);
     echo $filer_usr;

@@ -39,7 +39,7 @@ include 'db.php';
                 ?>
                 </a>
                 <a>:</a>
-                <!-- xóa bài đăng -->
+                <!-- xóa bài đănng -->
               <a>
               <?php
               echo $data[$i]['content'];
