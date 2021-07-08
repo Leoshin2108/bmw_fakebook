@@ -6,7 +6,7 @@
             header("location:login.php");
         } else
         { 
-            $sql ="SELECT username FROM  users";
+            $sql ="SELECT username FROM  userss";
             $row =mysqli_query($con,$sql);
 
             //echo mysqli_num_rows($row);

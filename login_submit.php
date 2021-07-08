@@ -9,7 +9,7 @@ if((isset ($_POST['submit'])) && $_POST['username']!= ''  && $_POST['password']!
     $pasword = htmlspecialchars(addslashes($_POST['password']));
     //$pasword = password_hash($password, PASSWORD_DEFAULT);//md5($pasword);
     //echo
-    $sql = "SELECT *from users where username= '$username' ";
+    $sql = "SELECT *from userss where username= '$username' ";
 
     $user =mysqli_query($con,$sql);
     

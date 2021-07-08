@@ -23,7 +23,7 @@ if((isset ($_POST['submit'])) && $_POST['username']!= '' && $_POST['Email']!= ''
 
         header("location:sign_up.php");
     }
-    $sql ="SELECT *FROM users where username = '$username'";
+    $sql ="SELECT *FROM userss where username = '$username'";
     $old =mysqli_query($con,$sql);
     //echo mysqli_num_rows($old);
     if ((mysqli_num_rows($old)>0))
@@ -34,7 +34,7 @@ if((isset ($_POST['submit'])) && $_POST['username']!= '' && $_POST['Email']!= ''
    {
     //$password = md5($password);
     $password=password_hash($password, PASSWORD_DEFAULT);
-    $sql =" INSERT INTO users (username,password,email) values('$username','$password','$Email')";
+    $sql =" INSERT INTO userss (username,password,email) values('$username','$password','$Email')";
     mysqli_query($con,$sql);
     //echo"123";
     ?>
